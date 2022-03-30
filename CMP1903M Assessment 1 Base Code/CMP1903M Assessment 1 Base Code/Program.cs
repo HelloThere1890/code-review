@@ -32,6 +32,7 @@ namespace CMP1903M_Assessment_1_Base_Code
             //string textchoice = Console.ReadLine();
             bool wrongInput = true;
 
+
             //loop while input does not equal 1 or 2
             do
             {
@@ -41,7 +42,8 @@ namespace CMP1903M_Assessment_1_Base_Code
                     //pass to input method
                     wrongInput = false;
                     userInput = input.manualTextInput();
-                    Console.WriteLine(userInput);
+
+
                     //pass values back to 'analyseText' method
                     analyse.analyseText(userInput);
                 }
@@ -57,24 +59,6 @@ namespace CMP1903M_Assessment_1_Base_Code
                    
                 }
             } while (wrongInput == true);
-
-            //check user's input
-            /*if (textchoice == "1")
-            {
-                //pass to input method
-                userInput = input.manualTextInput();
-                Console.WriteLine(userInput);
-                //pass values back to 'analyseText' method
-                analyse.analyseText(userInput);
-            }
-            else if(textchoice == "2")
-            {
-                Console.WriteLine("agagaga");
-            }
-            else
-            {
-                Console.WriteLine("Please insert either 1 or 2");
-            }*/
 
 
             //Receive a list of integers back

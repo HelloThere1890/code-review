@@ -17,7 +17,8 @@ namespace CMP1903M_Assessment_1_Base_Code
         //Gets text input from the keyboard
         public string manualTextInput()
         {
-
+            Console.WriteLine("Please type your text here: ");
+            string text = Console.ReadLine();
             return text;
         }
 

@@ -17,7 +17,31 @@ namespace CMP1903M_Assessment_1_Base_Code
         //Gets text input from the keyboard
         public string manualTextInput()
         {
+            bool userHasFinished = false;
 
+            //list thing
+            List<string> userInputList = new List<string>();
+
+            Console.WriteLine("Please type your line(s) of text here. Insert '*' when finished: ");
+
+            //check for * to see if user has finished typing
+            do
+            {
+                string usertext = Console.ReadLine();
+                if (usertext == "*")
+                {
+                    //userHasFinished = true;
+                    break;
+                }
+                else
+                {
+                    //add user input to list of strings
+                    userInputList.Add(usertext);
+                }
+            } while (userHasFinished == false);
+
+            //create text string to return list to analyse
+            string text = string.Join(" ", userInputList);
             return text;
         }
 

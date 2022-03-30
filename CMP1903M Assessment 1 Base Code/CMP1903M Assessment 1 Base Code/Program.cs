@@ -29,10 +29,37 @@ namespace CMP1903M_Assessment_1_Base_Code
             Console.WriteLine("Input '2' to use text through another file.");
 
             string userInput = "";
-            string textchoice = Console.ReadLine();
+            //string textchoice = Console.ReadLine();
+            bool wrongInput = true;
+
+            //loop while input does not equal 1 or 2
+            do
+            {
+                string textchoice = Console.ReadLine();
+                if (textchoice == "1")
+                {
+                    //pass to input method
+                    wrongInput = false;
+                    userInput = input.manualTextInput();
+                    Console.WriteLine(userInput);
+                    //pass values back to 'analyseText' method
+                    analyse.analyseText(userInput);
+                }
+                else if (textchoice == "2")
+                {
+                    wrongInput = false;
+                    Console.WriteLine("agagaga");
+                }
+                else
+                {
+                    //wrongInput = true;
+                    Console.WriteLine("Please insert either 1 or 2");
+                   
+                }
+            } while (wrongInput == true);
 
             //check user's input
-            if (textchoice == "1")
+            /*if (textchoice == "1")
             {
                 //pass to input method
                 userInput = input.manualTextInput();
@@ -44,6 +71,10 @@ namespace CMP1903M_Assessment_1_Base_Code
             {
                 Console.WriteLine("agagaga");
             }
+            else
+            {
+                Console.WriteLine("Please insert either 1 or 2");
+            }*/
 
 
             //Receive a list of integers back

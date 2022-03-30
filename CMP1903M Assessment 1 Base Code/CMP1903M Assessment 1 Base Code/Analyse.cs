@@ -44,6 +44,7 @@ namespace CMP1903M_Assessment_1_Base_Code
             }
 
 
+
             //convert to lower case to analyse vowels and consonants
             string lowerCaseText = input.ToLower();
 
@@ -53,10 +54,6 @@ namespace CMP1903M_Assessment_1_Base_Code
             {
                 lowerCaseText = lowerCaseText.Replace(i, "");
             }
-
-
-
-
 
             //check vowels and consonants
             int vowels = 0;

@@ -14,11 +14,11 @@ namespace CMP1903M_Assessment_1_Base_Code
 
         public void outputResults(List<int>parameters)
         {
-            Console.WriteLine("sentences: {0}", parameters[0]);
-            Console.WriteLine("vowels: {0}", parameters[1]);
-            Console.WriteLine("consonants: {0}", parameters[2]);
-            Console.WriteLine("lower case: {0}", parameters[3]);
-            Console.WriteLine("upper case: {0}", parameters[4]);
+            Console.WriteLine("Number of sentences: {0}", parameters[0]);
+            Console.WriteLine("Number of vowels: {0}", parameters[1]);
+            Console.WriteLine("Number of consonants: {0}", parameters[2]);
+            Console.WriteLine("Number of lower case characters: {0}", parameters[3]);
+            Console.WriteLine("NUmber of upper case characters: {0}", parameters[4]);
         }
     }
 }

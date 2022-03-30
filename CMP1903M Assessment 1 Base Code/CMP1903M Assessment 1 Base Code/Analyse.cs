@@ -32,17 +32,22 @@ namespace CMP1903M_Assessment_1_Base_Code
             }
 
             //calculate number of sentences
-            //split text into array based on sentences
+            //split text into list based on sentences
             string[] textBreak = input.Split(".");
             int sentences = textBreak.Length;
             int sentenceCount = 0;
 
 
-            for (int i=0; i<sentenceCount; i++)
+            for (int i=0; i<sentences; i++)
             {
                 sentenceCount++;
             }
 
+            //delete words after * - for file analysis
+            if (input.Contains('*'))
+            {
+                input = input.Substring(0, input.IndexOf("*"));
+            }
 
 
             //convert to lower case to analyse vowels and consonants
@@ -81,7 +86,7 @@ namespace CMP1903M_Assessment_1_Base_Code
                 {
                     lowerCaseChars++;
                 }
-                else if (char.IsLower(input[i]))
+                else if (char.IsUpper(input[i]))
                 {
                     upperCaseChars++;
                 }

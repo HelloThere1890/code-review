@@ -24,7 +24,7 @@ namespace CMP1903M_Assessment_1_Base_Code
 
             Console.WriteLine("Please type your line(s) of text here. Insert '*' when finished: ");
 
-            //check for * to see if user has finished typing
+            //check for * to see if user has finished typing, else continues letting user type
             do
             {
                 string usertext = Console.ReadLine();
@@ -52,6 +52,8 @@ namespace CMP1903M_Assessment_1_Base_Code
         public string fileTextInput(string fileName)
         {
 
+            fileName = @"C:\Users\Molli\Desktop\code pls work\CMP1903M Assessment 1 Base Code\CMP1903M Assessment 1 Base Code\testfile.txt";
+            string text = File.ReadAllText(fileName);
             return text;
         }
 

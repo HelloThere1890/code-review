@@ -43,14 +43,13 @@ namespace CMP1903M_Assessment_1_Base_Code
                     wrongInput = false;
                     userInput = input.manualTextInput();
 
-
                     //pass values back to 'analyseText' method
                     analyse.analyseText(userInput);
                 }
                 else if (textchoice == "2")
                 {
                     wrongInput = false;
-                    Console.WriteLine("agagaga");
+                    userInput = input.fileTextInput("testfile.txt");
                 }
                 else
                 {

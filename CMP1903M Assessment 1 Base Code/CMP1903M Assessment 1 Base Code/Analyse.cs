@@ -99,6 +99,27 @@ namespace CMP1903M_Assessment_1_Base_Code
             values.Insert(3, lowerCaseChars);
             values.Insert(4, upperCaseChars);
 
+            //create long words file
+            string longWords = ("longWordsFile.txt");
+            //empties file every time program is run
+            File.Delete(longWords);
+
+            //list to add words greather than 7 to
+            List<string> finalWords = new List<string>();
+
+            //split input into list of words
+            string[] listOfWords = input.Split(" ");
+            //checks for words greater than 7
+            for (int i=0; i<listOfWords.Length; i++)
+            {
+                if (listOfWords[i].Length > 7)
+                {
+                    //add words to list
+                    finalWords.Add(listOfWords[i]);
+                    //add to longWordsFile
+                    File.WriteAllLines(longWords, finalWords);
+                }
+            }
 
 
 

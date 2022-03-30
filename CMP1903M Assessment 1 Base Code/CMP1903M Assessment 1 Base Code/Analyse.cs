@@ -47,7 +47,15 @@ namespace CMP1903M_Assessment_1_Base_Code
             //convert to lower case to analyse vowels and consonants
             string lowerCaseText = input.ToLower();
 
-            
+            //remove special characters - stop counters breaking when input by user
+            var specialChars = new String[] { "!", "£", "$", "%", "&", "*", "(", ")", "?", "@", ",", ":", "'", "/", "#" };
+            foreach (var i in specialChars)
+            {
+                lowerCaseText = lowerCaseText.Replace(i, "");
+            }
+
+
+
 
 
             //check vowels and consonants
@@ -88,12 +96,6 @@ namespace CMP1903M_Assessment_1_Base_Code
             values.Insert(2, consonants);
             values.Insert(3, lowerCaseChars);
             values.Insert(4, upperCaseChars);
-
-
-            //vowels and consonants go to 0 when special character is used - remove them
-
-
-
 
 
 

@@ -39,7 +39,6 @@ namespace CMP1903M_Assessment_1_Base_Code
 
             //calculate number of sentences
             //split text into list based on sentences
-            //string[] textBreak = input.Split(".");
             int sentenceCount = 0;
             for (int i = 0; i < input.Length; i++)
             {

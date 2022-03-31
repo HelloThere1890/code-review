@@ -29,7 +29,6 @@ namespace CMP1903M_Assessment_1_Base_Code
             Console.WriteLine("Input '2' to use text through another file.");
 
             string userInput = "";
-            //string textchoice = Console.ReadLine();
             bool wrongInput = true;
 
 
@@ -46,16 +45,11 @@ namespace CMP1903M_Assessment_1_Base_Code
                         //pass to input method
                         wrongInput = false;
                         userInput = input.manualTextInput();
-                        //analyse.analyseLength(userInput);
                         break;
-
-                        //pass values back to 'analyseText' method
-                        //analyse.analyseText(userInput);
                     }
                     else if (textchoice == "2")
                     {
                         wrongInput = false;
-                        //@"C:\Users\Molli\Desktop\code pls work\CMP1903M Assessment 1 Base Code\CMP1903M Assessment 1 Base Code\testfile.txt"
                         userInput = input.fileTextInput();
                         break;
                     }
@@ -68,12 +62,12 @@ namespace CMP1903M_Assessment_1_Base_Code
                 }
                 catch
                 {
-                    //Console.WriteLine("Please enter a valid input.");
+                    Console.WriteLine("Please enter a valid input.");
                 }
             } while (wrongInput == true);
 
 
-            //Receive a list of integers back
+            //pass values back to 'analyseText' method and store as variable
             parameters = analyse.analyseText(userInput);
             analyse.analyseLength(userInput);
 
@@ -84,8 +78,6 @@ namespace CMP1903M_Assessment_1_Base_Code
 
             report.outputResults(parameters);
             report.compareResults(parameters);
-
-            //TO ADD: Get the frequency of individual letters?
 
 
         }

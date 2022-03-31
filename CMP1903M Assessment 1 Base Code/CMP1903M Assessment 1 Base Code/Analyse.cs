@@ -39,15 +39,15 @@ namespace CMP1903M_Assessment_1_Base_Code
 
             //calculate number of sentences
             //split text into list based on sentences
-            string[] textBreak = input.Split(".");
+            //string[] textBreak = input.Split(".");
             int sentenceCount = 0;
-
-
-            for (int i = 0; i < textBreak.Length; i++)
+            for (int i = 0; i < input.Length; i++)
             {
-                sentenceCount++;
+                if (input[i] == '.' || input[i] == '?' || input[i] == '!')
+                {
+                    sentenceCount++;
+                }
             }
-
 
             //convert to lower case to analyse vowels and consonants
             string lowerCaseText = input.ToLower();
@@ -68,8 +68,7 @@ namespace CMP1903M_Assessment_1_Base_Code
                 {
                     vowels++;
                 }
-                else if ((lowerCaseText[i] >= 'a' && lowerCaseText[i] <= 'z') ||
-                 (lowerCaseText[i] >= 'A' && lowerCaseText[i] <= 'Z'))
+                else if ((lowerCaseText[i] >= 'a' && lowerCaseText[i] <= 'z') || (lowerCaseText[i] >= 'A' && lowerCaseText[i] <= 'Z'))
                 {
                     consonants++;
                 }
@@ -91,15 +90,19 @@ namespace CMP1903M_Assessment_1_Base_Code
                 }
             }
 
-            //make class inserting all variables into values
             values.Insert(0, sentenceCount);
             values.Insert(1, vowels);
             values.Insert(2, consonants);
             values.Insert(3, lowerCaseChars);
             values.Insert(4, upperCaseChars);
 
+            //returns value back to 'Program'
+            return values;
+        }
+        public void analyseLength(string input)
+        {
             //create long words file
-            string longWords = ("longWordsFile.txt");
+            string longWords = ("longWordsFile.txt"); //in debug file
             //empties file every time program is run
             File.Delete(longWords);
 
@@ -119,9 +122,6 @@ namespace CMP1903M_Assessment_1_Base_Code
                     File.WriteAllLines(longWords, finalWords);
                 }
             }
-
-            //returns value back to 'Program'
-            return values;
         }
     }
 }

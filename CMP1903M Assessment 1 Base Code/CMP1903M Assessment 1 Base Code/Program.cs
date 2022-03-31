@@ -46,6 +46,7 @@ namespace CMP1903M_Assessment_1_Base_Code
                         //pass to input method
                         wrongInput = false;
                         userInput = input.manualTextInput();
+                        //analyse.analyseLength(userInput);
                         break;
 
                         //pass values back to 'analyseText' method
@@ -53,11 +54,9 @@ namespace CMP1903M_Assessment_1_Base_Code
                     }
                     else if (textchoice == "2")
                     {
-                        //wrongInput = false;
+                        wrongInput = false;
                         //@"C:\Users\Molli\Desktop\code pls work\CMP1903M Assessment 1 Base Code\CMP1903M Assessment 1 Base Code\testfile.txt"
                         userInput = input.fileTextInput();
-                        analyse.analyseText(userInput);
-                        wrongInput = false;
                         break;
                     }
                     else
@@ -76,16 +75,19 @@ namespace CMP1903M_Assessment_1_Base_Code
 
             //Receive a list of integers back
             parameters = analyse.analyseText(userInput);
+            analyse.analyseLength(userInput);
 
             //Report the results of the analysis
+            Console.WriteLine("\n");
+            Console.WriteLine(userInput);
+            Console.WriteLine("\n");
+
             report.outputResults(parameters);
+            report.compareResults(parameters);
 
             //TO ADD: Get the frequency of individual letters?
 
 
         }
-
-
-
     }
 }

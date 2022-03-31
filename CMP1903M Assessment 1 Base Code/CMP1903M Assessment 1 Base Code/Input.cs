@@ -22,7 +22,7 @@ namespace CMP1903M_Assessment_1_Base_Code
             //create list to hold user input
             List<string> userInputList = new List<string>();
 
-            Console.WriteLine("Please type your line(s) of text here. Insert '*' when finished: ");
+            Console.WriteLine("Please type your line(s) of text here. Insert '*' on new line when finished: ");
 
             //check for * to see if user has finished typing, else continues letting user type
             do
@@ -51,10 +51,20 @@ namespace CMP1903M_Assessment_1_Base_Code
         //Gets text input from a .txt file
         public string fileTextInput()
         {
-
+            try
+            {
+                string text = File.ReadAllText("testfile.txt");
+                return text;
+            }
+            catch
+            {
+                Console.WriteLine("Cannot Find file.");
+                Environment.Exit(0);
+                return null;
+            }
             //fileName = ("testfile.txt");
-            string text = File.ReadAllText("testfile.txt");
-            return text;
+            //string text = File.ReadAllText(fileName);
+            //return text;
         }
 
     }

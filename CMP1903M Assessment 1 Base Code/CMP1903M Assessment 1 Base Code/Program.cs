@@ -50,7 +50,6 @@ namespace CMP1903M_Assessment_1_Base_Code
                     else if (textchoice == "2")
                     {
                         wrongInput = false;
-                        //@"C:\Users\Molli\Desktop\code pls work\CMP1903M Assessment 1 Base Code\CMP1903M Assessment 1 Base Code\testfile.txt"
                         userInput = input.fileTextInput();
                         break;
                     }

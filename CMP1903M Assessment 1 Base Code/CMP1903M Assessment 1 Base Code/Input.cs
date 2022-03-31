@@ -53,7 +53,10 @@ namespace CMP1903M_Assessment_1_Base_Code
         {
             try
             {
-                string text = File.ReadAllText("testfile.txt");
+                //attemt to add user input to choose file
+                //Console.WriteLine("Enter file path location: ");
+                //string fileName = (Console.ReadLine());
+                string text = File.ReadAllText(@"C:\Users\Molli\Desktop\code pls work\CMP1903M Assessment 1 Base Code\CMP1903M Assessment 1 Base Code\testfile.txt");
                 return text;
             }
             catch

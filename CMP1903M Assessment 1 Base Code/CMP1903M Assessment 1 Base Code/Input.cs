@@ -10,7 +10,7 @@ namespace CMP1903M_Assessment_1_Base_Code
     {
         //Handles the text input for Assessment 1
         string text = "nothing";
-        
+
         //Method: manualTextInput
         //Arguments: none
         //Returns: string

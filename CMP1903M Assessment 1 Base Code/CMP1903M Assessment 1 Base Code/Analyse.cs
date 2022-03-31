@@ -31,22 +31,21 @@ namespace CMP1903M_Assessment_1_Base_Code
                 values.Add(0);
             }
 
-            //calculate number of sentences
-            //split text into list based on sentences
-            string[] textBreak = input.Split(".");
-            int sentences = textBreak.Length;
-            int sentenceCount = 0;
-
-
-            for (int i=0; i<sentences; i++)
-            {
-                sentenceCount++;
-            }
-
             //delete words after * - for file analysis
             if (input.Contains('*'))
             {
                 input = input.Substring(0, input.IndexOf("*"));
+            }
+
+            //calculate number of sentences
+            //split text into list based on sentences
+            string[] textBreak = input.Split(".");
+            int sentenceCount = 0;
+
+
+            for (int i=0; i<textBreak.Length; i++)
+            {
+                    sentenceCount++;
             }
 
 
@@ -120,10 +119,6 @@ namespace CMP1903M_Assessment_1_Base_Code
                     File.WriteAllLines(longWords, finalWords);
                 }
             }
-
-
-
-
 
             //returns value back to 'Program'
             return values;

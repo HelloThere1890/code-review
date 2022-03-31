@@ -9,7 +9,7 @@ namespace CMP1903M_Assessment_1_Base_Code
     public class Input
     {
         //Handles the text input for Assessment 1
-        string text = "nothing";
+        //string text = "nothing";
         
         //Method: manualTextInput
         //Arguments: none
@@ -19,7 +19,7 @@ namespace CMP1903M_Assessment_1_Base_Code
         {
             bool userHasFinished = false;
 
-            //list thing
+            //create list to hold user input
             List<string> userInputList = new List<string>();
 
             Console.WriteLine("Please type your line(s) of text here. Insert '*' when finished: ");
@@ -49,12 +49,12 @@ namespace CMP1903M_Assessment_1_Base_Code
         //Arguments: string (the file path)
         //Returns: string
         //Gets text input from a .txt file
-        public string fileTextInput(string fileName)
+        public string fileTextInput()
         {
 
-            fileName = @"C:\Users\Molli\Desktop\code pls work\CMP1903M Assessment 1 Base Code\CMP1903M Assessment 1 Base Code\testfile.txt";
-            string text = File.ReadAllText(fileName);
-            return text;
+                //fileName = ("testfile.txt");
+                string text = File.ReadAllText("testfile.txt");
+                return text;
         }
 
     }

@@ -18,7 +18,7 @@ namespace CMP1903M_Assessment_1_Base_Code
             Console.WriteLine("Number of vowels: {0}", parameters[1]);
             Console.WriteLine("Number of consonants: {0}", parameters[2]);
             Console.WriteLine("Number of lower case characters: {0}", parameters[3]);
-            Console.WriteLine("NUmber of upper case characters: {0}", parameters[4]);
+            Console.WriteLine("Number of upper case characters: {0}", parameters[4]);
         }
     }
 }

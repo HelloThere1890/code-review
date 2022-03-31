@@ -34,28 +34,42 @@ namespace CMP1903M_Assessment_1_Base_Code
 
 
             //loop while input does not equal 1 or 2
+
             do
             {
-                string textchoice = Console.ReadLine();
-                if (textchoice == "1")
+                try
                 {
-                    //pass to input method
-                    wrongInput = false;
-                    userInput = input.manualTextInput();
+                    string textchoice = (Console.ReadLine());
 
-                    //pass values back to 'analyseText' method
-                    analyse.analyseText(userInput);
+                    if (textchoice == "1")
+                    {
+                        //pass to input method
+                        wrongInput = false;
+                        userInput = input.manualTextInput();
+                        break;
+
+                        //pass values back to 'analyseText' method
+                        //analyse.analyseText(userInput);
+                    }
+                    else if (textchoice == "2")
+                    {
+                        //wrongInput = false;
+                        //@"C:\Users\Molli\Desktop\code pls work\CMP1903M Assessment 1 Base Code\CMP1903M Assessment 1 Base Code\testfile.txt"
+                        userInput = input.fileTextInput();
+                        analyse.analyseText(userInput);
+                        wrongInput = false;
+                        break;
+                    }
+                    else
+                    {
+                        //wrongInput = true;
+                        Console.WriteLine("Please insert either 1 or 2");
+                    }
+
                 }
-                else if (textchoice == "2")
+                catch
                 {
-                    wrongInput = false;
-                    userInput = input.fileTextInput("testfile.txt");
-                }
-                else
-                {
-                    //wrongInput = true;
-                    Console.WriteLine("Please insert either 1 or 2");
-                   
+                    //Console.WriteLine("Please enter a valid input.");
                 }
             } while (wrongInput == true);
 

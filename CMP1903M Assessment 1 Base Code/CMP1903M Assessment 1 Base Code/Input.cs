@@ -62,9 +62,6 @@ namespace CMP1903M_Assessment_1_Base_Code
                 Environment.Exit(0);
                 return null;
             }
-            //fileName = ("testfile.txt");
-            //string text = File.ReadAllText(fileName);
-            //return text;
         }
 
     }

@@ -9,9 +9,6 @@ namespace CMP1903M_Assessment_1_Base_Code
     class Report
     {
         //Handles the reporting of the analysis
-        //Maybe have different methods for different formats of output?
-        //eg.   public void outputConsole(List<int>
-
         public void outputResults(List<int> parameters)
         {
             //output results to user
